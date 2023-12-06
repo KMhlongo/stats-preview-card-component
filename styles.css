@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --main-bg-blue: hsl(233, 47%, 7%);
+    --card-bg-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    --white: hsl(0, 0%, 100%);
+    --main-para-white: hsla(0, 0%, 100%, 0.75);
+    --stat-head-white: hsla(0, 0%, 100%, 0.6);
+
+    --font-inter:'Inter', sans-serif;
+    --font-lexend: 'Lexend Deca', sans-serif;;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1.5em;
+    height: 100vh;
+    background-color: var(--main-bg-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    max-width: 850px;
+    font-family: var(--font-inter);
+    color: var(--white);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 450px;
+    background-color: var(--card-bg-blue);
+    padding: 3em 4em 3em 3em;
+}
+
+span {
+    color: var(--soft-violet);
+}
+
+h1 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+p {
+    font: var(--font-lexend);
+    font-size: 0.85em;
+    color: var(--main-para-white);
+    line-height: 1.75em;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4em;
+}
+
+h2 {
+    color: var(--white);
+}
+
+.stats p {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.7em;
+    color: var(--stat-head-white);
+}
+
+.hero-img {
+    max-width: 400px;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--soft-violet);
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        height: svh;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 5em;
+    }
+
+    .hero-text {
+        max-width: 450px;
+        background-color: var(--card-bg-blue);
+        padding: 1.5em 2.1em;
+    }
+
+    h1 {
+        font-size: 1.75em;
+        margin-block: 0.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    img {
+        content: url('./images/image-header-mobile.jpg');
+    }
+
+    .stats {
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .stats div {
+        margin-bottom: 1em;
+    }
+
+}
